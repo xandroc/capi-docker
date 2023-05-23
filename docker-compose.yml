@@ -4,7 +4,7 @@ services:
   capitest:
     image: local/capitest2.7
     volumes:
-      - ./lts-capi-release/src/cloud_controller_ng:/app
+      - ./src/cloud_controller/lts-cloud_controller_ng:/app
     container_name: capi27
     tty: true
     command: "/bin/bash"

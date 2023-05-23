@@ -1,0 +1,3 @@
+[submodule "src/cloud_controller/lts-cloud_controller_ng"]
+	path = src/cloud_controller/lts-cloud_controller_ng
+	url = git@github.com:pivotal-cf/lts-cloud_controller_ng
