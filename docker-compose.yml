@@ -1,0 +1,19 @@
+version: '3.5'
+
+services:
+  capitest:
+    image: local/capitest2.7
+    volumes:
+      - ./lts-capi-release/src/cloud_controller_ng:/app
+    container_name: capi27
+    tty: true
+    command: "/bin/bash"
+  pg:
+    image: postgres
+    container_name: pgtestdb
+    environment:
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_USER: pguser
+      POSTGRES_DB: cc_test
+
+
