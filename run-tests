@@ -1,0 +1,14 @@
+#!/bin/bash
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+
+PGPASSWORD=changeme createdb -U pguser -h pg -p 5432 pguser
+
+export POSTGRES_CONNECTION_PREFIX='postgres://pguser:changeme@pg:5432'
+export DB=postgres
+
+cd /app
+chruby 
+bundle
+bundle exec rake spec:all
+
