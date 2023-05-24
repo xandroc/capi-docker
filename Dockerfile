@@ -29,3 +29,4 @@ SHELL ["/bin/bash", "-c", "source /usr/local/share/chruby/chruby.sh && chruby 2.
 # gem install pg -v '1.2.3' --source 'https://rubygems.org/'
 
 # maybe gem install bundler for postgres client
+RUN apt-get install postgresql-client -y
